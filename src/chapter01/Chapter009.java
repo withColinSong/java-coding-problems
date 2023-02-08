@@ -1,7 +1,9 @@
 package chapter01;
 
 
+import java.util.Arrays;
 import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 /**
  * @WIRTE ellie.song
@@ -43,11 +45,16 @@ public class Chapter009 {
         return String.join(separator, args);
     }
 
+    public static String JoinByDelimiterUseStream(String separator, String ...args) {
+        return Arrays.stream(args).collect(Collectors.joining(separator));
+    }
+
     public static void main(String[] args) {
 
         System.out.println(JoinByDelimiterUseStringBuilder(delimiter , a,b,c));
         System.out.println(JoinByDelimiterUseStringJoiner(delimiter , a,b,c));
         System.out.println(JoinByDelimiterUseStringJoin(delimiter , a,b,c));
+        System.out.println(JoinByDelimiterUseStream(delimiter , a,b,c));
 
     }
 }
