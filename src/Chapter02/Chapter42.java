@@ -22,7 +22,7 @@ class AnotherCar {
 
     public AnotherCar(String name, Color color) {
         this.name = AnotherCar.requireNonNullElseThrow(name, new UnsupportedOperationException("Name cannot be set as null"));
-        this.color = AnotherCar.requireNonNullElseThrow(color, () -> new UnsupportedOperationException("Color cannot be set as null"));
+        this.color = AnotherCar.requireNotNullElseThrow(color, () -> new UnsupportedOperationException("Color cannot be set as null"));
     }
 
     public static <T> T requireNonNullElseThrowIAE(T obj, String message) {
@@ -47,7 +47,7 @@ class AnotherCar {
         return obj;
     }
 
-    public static <T, X extends Throwable> T requireNonNullElseThrow(T obj, Supplier<? extends X> exceptionSupplier) throws X {
+    public static <T, X extends Throwable> T requireNotNullElseThrow(T obj, Supplier<? extends X> exceptionSupplier) throws X {
         if(obj != null) {
             return obj;
         } else {
