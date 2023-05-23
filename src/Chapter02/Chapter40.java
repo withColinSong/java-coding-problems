@@ -43,7 +43,7 @@ public class Chapter40 {
     // 3. 함수형 스타일 predicate 이용하기
     public static List<Integer> evenIntegers3(List<Integer> integers) {
         if(integers == null)
-            new IllegalArgumentException("List can't be null");
+            throw new IllegalArgumentException("List can't be null");
 
         return  integers.stream()
                 .filter(Objects::nonNull)
