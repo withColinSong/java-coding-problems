@@ -7,11 +7,8 @@ import java.util.function.Supplier;
  * null 참조 검사와 명시된 예외
  */
 public class Chapter42 {
-
-
-
     public static void main(String[] args) {
-
+        new AnotherCar("hello", null);
     }
 }
 
@@ -26,21 +23,23 @@ class AnotherCar {
     }
 
     public static <T> T requireNonNullElseThrowIAE(T obj, String message) {
-        if(obj == null)
+        if (obj == null)
             throw new IllegalArgumentException(message);
 
         return obj;
     }
 
     public static <T> T requireNonNullElseThrowIAE(T obj, Supplier<String> messageSupplier) {
-        if(obj == null)
+        if (obj == null)
             throw new IllegalArgumentException(messageSupplier == null ? null : messageSupplier.get());
 
         return obj;
-    };
+    }
+
+    ;
 
     public static <T, X extends Throwable> T requireNonNullElseThrow(T obj, X exception) throws X {
-        if(obj == null) {
+        if (obj == null) {
             throw exception;
         }
 
@@ -48,7 +47,7 @@ class AnotherCar {
     }
 
     public static <T, X extends Throwable> T requireNotNullElseThrow(T obj, Supplier<? extends X> exceptionSupplier) throws X {
-        if(obj != null) {
+        if (obj != null) {
             return obj;
         } else {
             throw exceptionSupplier.get();
