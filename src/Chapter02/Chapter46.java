@@ -1,11 +1,7 @@
 package Chapter02;
 
+import java.util.ArrayList;
 import java.util.Objects;
-
-/**
- * @WIRTE ellie.song
- * equals / hasCode
- */
 public class Chapter46 {
     public static void main(String[] args) {
         Person person1 = new Person("song", "20");
