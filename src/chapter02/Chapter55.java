@@ -1,6 +1,4 @@
-package Chapter02;
-
-import java.util.Objects;
+package chapter02;
 
 interface Player {
     void run();

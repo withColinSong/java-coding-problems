@@ -1,4 +1,4 @@
-package Chapter02;
+package chapter02;
 
 final class Point {
     private final double x;

@@ -1,6 +1,5 @@
-package Chapter02;
+package chapter02;
 
-import java.util.ArrayList;
 import java.util.Objects;
 public class Chapter46 {
     public static void main(String[] args) {
