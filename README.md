@@ -1,9 +1,5 @@
-
-<!-- TOC -->
-* [java-coding-problems](#java-coding-problems)
-    * [1. 공부 목적](#1--)
-<!-- TOC -->
 # java-coding-problems
 
-### 1. 공부 목적
-- 개념 잡기
+> 목적 : 발전한 자바 개념 잡기
+
+- jdk : 17
